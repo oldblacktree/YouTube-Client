@@ -13,7 +13,9 @@
   justify-content: center;
   align-items: center;
   transition-duration: 0.1s;
-   user-select: none
+  user-select: none;
+  position: relative;
+
 }
 .pagination__item--prev:hover,
 .pagination__item--next:hover {
@@ -23,4 +25,18 @@
 .pagination__item--prev:active,
 .pagination__item--next:active {
   background-color: bisque ;
+}
+
+.pagination__hover{
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: #98A682;
+  top: -30px;
+  left: 7px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

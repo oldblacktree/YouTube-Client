@@ -1,6 +1,6 @@
 export default class AppModel {
   constructor(request) {
-    this.url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyD30CHOLJv82UNtr4cb5V3smX6Kf0RqE8Y&type=video&part=snippet&maxResults=9&q=${request}`;
+    this.url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyD30CHOLJv82UNtr4cb5V3smX6Kf0RqE8Y&type=video&part=snippet&maxResults=15&q=${request}`;
   }
 
   async getClips() {

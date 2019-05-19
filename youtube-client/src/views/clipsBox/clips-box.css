@@ -169,11 +169,10 @@ body {
 
 
 .clip-info__description {
-    white-space: nowrap; /* Запрещаем перенос строк */
-    overflow: hidden; /* Обрезаем все, что не помещается в область */
-    background: #fc0; /* Цвет фона */
-    padding: 5px; /* Поля вокруг текста */
-    text-overflow: ellipsis; /* Добавляем многоточие */
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px;
+    text-overflow: ellipsis;
 }
 
 @media (max-width: 1500px) {
@@ -196,3 +195,5 @@ body {
         --clipAmount: 1;
     }
 }
+
+

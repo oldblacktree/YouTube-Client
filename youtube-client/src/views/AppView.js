@@ -27,7 +27,7 @@ export default class AppView {
     g.classList.add('display-none');
     document.getElementById('clips-box').innerHTML = '';
     document.getElementById('clips-box').style.setProperty('--i', '0');
-        const cur = document.getElementsByClassName('pagination__item--cur')[0];
+    const cur = document.getElementsByClassName('pagination__item--cur')[0];
     cur.innerHTML = "1";
   }
 
