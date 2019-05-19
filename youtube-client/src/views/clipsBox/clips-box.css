@@ -80,9 +80,12 @@
     padding: 0 5px;
     text-overflow: clip;
 } */
+html {
+  overflow-x: hidden;
+}
 body {
     background-color: #807164;
-    overflow-x: hidden;
+
 }
 :root {
 
@@ -166,7 +169,6 @@ body {
 
 
 .clip-info__description {
-
     white-space: nowrap; /* Запрещаем перенос строк */
     overflow: hidden; /* Обрезаем все, что не помещается в область */
     background: #fc0; /* Цвет фона */
