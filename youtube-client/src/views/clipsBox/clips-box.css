@@ -97,6 +97,9 @@ body {
   display: flex;
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
 }
+.clips-box:hover {
+  cursor: grab;
+}
 .clip {
   width: calc(100% / (var(--clipAmount) * var(--n)));
   height: 100%;

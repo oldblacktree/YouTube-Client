@@ -1,6 +1,6 @@
 export default class AppModel {
   constructor(request) {
-    this.url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyDRiMRQqTS_lqEQ8vsicotuSzhTlnaEhc0&type=video&part=snippet&maxResults=15&q=${request}`;
+    this.url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyD30CHOLJv82UNtr4cb5V3smX6Kf0RqE8Y&type=video&part=snippet&maxResults=9&q=${request}`;
   }
 
   async getClips() {
@@ -9,7 +9,11 @@ export default class AppModel {
 
     const arrVideoId = dataId.items.map(clip => clip.id.videoId);
 
-    const responceAllData = await fetch(`https://www.googleapis.com/youtube/v3/videos?key=AIzaSyDRiMRQqTS_lqEQ8vsicotuSzhTlnaEhc0&id=${arrVideoId.join(',')}&part=snippet,statistics`);
+    const responceAllData = await fetch(
+      `https://www.googleapis.com/youtube/v3/videos?key=AIzaSyD30CHOLJv82UNtr4cb5V3smX6Kf0RqE8Y&id=${arrVideoId.join(
+        ','
+      )}&part=snippet,statistics`
+    );
     const allData = await responceAllData.json();
 
     const arrClipData = allData.items.map((clip) => {

@@ -41,7 +41,6 @@ export default class AppView {
   showPagination() {
     this.pagination.element.style.setProperty('display', 'flex');
   }
-
 }
 //  const content = document.createElement('ul');
 //  content.innerHTML = this.titles.map(title => `<li>${title}</li>`).join('');

@@ -106,7 +106,6 @@ export default class ClipsBox {
 
     const _C = document.getElementById('clips-box');
     let numberClip = 3;
-    console.log(numberClip);
     let N = Math.ceil(_C.children.length / numberClip);
     const NF = 30;
     const TFN = {
@@ -183,6 +182,10 @@ export default class ClipsBox {
         ani();
         x0 = null;
         locked = false;
+        const cur = document.getElementsByClassName(
+          'pagination__item--cur',
+        )[0];
+        cur.innerHTML = `${i + 1}`;
       }
     }
 
@@ -205,6 +208,10 @@ export default class ClipsBox {
         ani();
         x0 = null;
         locked = false;
+        const cur = document.getElementsByClassName(
+          'pagination__item--cur',
+        )[0];
+        cur.innerHTML = `${i + 1}`;
       }
     }
 
@@ -215,7 +222,6 @@ export default class ClipsBox {
       ).getPropertyValue('--clipAmount');
       N = Math.ceil(_C.children.length / numberClip);
       _C.style.setProperty('--n', N);
-      console.log(numberClip);
     }
 
     size();
@@ -231,9 +237,39 @@ export default class ClipsBox {
 
     _C.addEventListener('mouseup', move, false);
     _C.addEventListener('touchend', moveM, false);
+
+    const cur = document.getElementsByClassName('pagination__item--cur')[0];
+
+    const next = document.getElementsByClassName('pagination__item--next')[0];
+    next.addEventListener('click', () => {
+      if (i < N - 1) {
+        i += 1;
+        _C.style.setProperty('--i', i);
+        cur.innerHTML = `${i + 1}`;
+      }
+    });
+
+    const prev = document.getElementsByClassName('pagination__item--prev')[0];
+    prev.addEventListener('click', () => {
+      if (i > 0) {
+        i -= 1;
+        _C.style.setProperty('--i', i);
+        cur.innerHTML = `${i + 1}`;
+      }
+    });
   }
 }
 
+
+//----------------------
+// let next = document.getElementsByClassName('pagination__item--next')[0];
+// next.addEventListener('click', () => {
+//   let cur = document.getElementById('clips-box').style.getPropertyValue('--i');
+//   i = cur + 1;
+//   _C.style.setProperty('--i', i);
+// });
+
+// -----------------
 
 // author: 'DarkSquidge';
 // date: '2018-08-13';

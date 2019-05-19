@@ -382,13 +382,14 @@ a {
   flex-wrap: wrap;
   animation-duration: 3s;
   animation-name: disappire;
-  opacity: 0.3;
+  animation-iteration-count: infinite;
+  opacity: 0.1;
 }
 
 @keyframes disappire {
   0% {
     diplay: flex;
-    opacity: 0.3;
+    opacity: 0.1;
   }
   35% {
     opacity: 1;
@@ -397,7 +398,7 @@ a {
     opacity: 1;
   }
   100% {
-    opacity: 0.3;
+    opacity: 0.1;
   }
 }
 
