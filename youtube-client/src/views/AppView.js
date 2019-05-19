@@ -27,10 +27,14 @@ export default class AppView {
     g.classList.add('display-none');
     document.getElementById('clips-box').innerHTML = '';
     document.getElementById('clips-box').style.setProperty('--i', '0');
+        const cur = document.getElementsByClassName('pagination__item--cur')[0];
+    cur.innerHTML = "1";
   }
 
   renderPagination() {
     document.body.appendChild(this.pagination.element);
+    const cur = document.getElementsByClassName('pagination__item--cur')[0];
+    cur.innerHTML = "1";
     // let next = document.getElementsByClassName('pagination__item--next')[0];
     // next.addEventListener('click', () => {
     //   let cur = document.getElementById('clips-box').style.getPropertyValue('--i');

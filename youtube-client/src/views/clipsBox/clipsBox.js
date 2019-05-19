@@ -105,7 +105,7 @@ export default class ClipsBox {
 
 
     const _C = document.getElementById('clips-box');
-    let numberClip = 3;
+    let numberClip = 1;
     let N = Math.ceil(_C.children.length / numberClip);
     const NF = 30;
     const TFN = {
