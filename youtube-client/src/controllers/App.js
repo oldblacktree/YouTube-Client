@@ -5,6 +5,7 @@ import AppView from '../views/AppView';
 let model;
 const view = new AppView();
 let request = '';
+let i;
 
 function start() {
   view.renderStartPage();
@@ -12,8 +13,11 @@ function start() {
 
   view.searchBox.element.addEventListener('keyup', async () => {
     if (event.keyCode === 13) {
-     let a = await document.getElementsByClassName('greeting')[0];
-      a.classList.add('display-none');
+      let g = await document.getElementsByClassName('greeting')[0];
+      g.classList.add('display-none');
+      document.getElementById('clips-box').innerHTML = '';
+      document.getElementById('clips-box').style.setProperty('--i', '0');
+
       request = view.searchBox.element.value;
       model = await new AppModel(request);
       const clips = await model.getClips();
