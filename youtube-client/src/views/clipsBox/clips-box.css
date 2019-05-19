@@ -1,108 +1,32 @@
-
-/* .clips-box {
-  margin: 0 auto;
-  width: 90%;
-  background-color: #cccc;
-  height: 350px;
-  display: flex;
-  position: relative;
-}
-.clip {
-  width: 250px;
-  height: 100%;
-  border: 1px solid #fff;
-  background-color: rgb(158, 158, 199);
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  background-color:  #807164;
-}
-.clip-container {
-    height: 100%;
-    background-color: #F5EBD0;
-    transition-duration: 0.3s;
-    display: flex;
-    flex-direction: column;
-}
-.clip-container:hover {
-    transform: scale(1.05);
-
-}
-.clip-head {
-    position: relative;
-    flex-grow: 1;
-}
-.clip-head__title {
-    width: 100%;
-    font-size: 20px;
-    display: block;
-    text-align: center;
-    position: absolute;
-    top:50%;
-    left: 0;
-    transform: translate(0, -50%);
-    background-color: #c9d0a4ee;
-    color: #C0633B;
-    transition-duration: 0.2s;
-}
-
-.clip-head__title:hover {
-    background-color: #99A682;
-    color: #654436;
-}
-
-
-.clip-head__image {
-    width: 100%;
-}
-.clip-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 3;
-    padding: 10px 0;
-}
-
-.clip-info__item {
-    padding: 10px 20px;
-    display: flex;
-}
-.clip-info__text {
-    flex-grow: 1;
-    text-align: center;
-}
-
-
-.clip-info__description {
-    height: 50px;
-    word-break: break-word;
-    text-align: justify;
-    overflow: hidden;
-    padding: 0 5px;
-    text-overflow: clip;
-} */
 html {
   overflow-x: hidden;
 }
+
 body {
-    background-color: #807164;
+  background-color: #807164;
 
 }
+
 :root {
 
   --n: 1;
   --clipAmount: 5;
 }
+
 .clips-box {
   width: 100%;
   width: calc(var(--n)*100%);
   background-color: #807164;
-  height: calc(100vw / var(--clipAmount) * 1.15);;
+  height: calc(100vw / var(--clipAmount) * 1.15);
+  ;
   display: flex;
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
 }
+
 .clips-box:hover {
   cursor: grab;
 }
+
 .clip {
   width: calc(100% / (var(--clipAmount) * var(--n)));
   height: 100%;
@@ -110,90 +34,96 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
-  background-color:  #807164;
-   user-select: none;
-  /* pointer-events: none;  */
+  background-color: #807164;
+  user-select: none;
 }
+
 .clip-container {
-    height: 100%;
-    background-color: #F5EBD0;
-    transition-duration: 0.3s;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  background-color: #F5EBD0;
+  transition-duration: 0.3s;
+  display: flex;
+  flex-direction: column;
 }
+
 .clip-container:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 
 }
+
 .clip-head {
-    position: relative;
+  position: relative;
 }
+
 .clip-head__title {
-    width: 100%;
-    font-size: 20px;
-    display: block;
-    text-align: center;
-    position: absolute;
-    top:50%;
-    left: 0;
-    transform: translate(0, -50%);
-    background-color: #c9d0a4ee;
-    color: #C0633B;
-    transition-duration: 0.2s;
+  width: 100%;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  background-color: #c9d0a4ee;
+  color: #C0633B;
+  transition-duration: 0.2s;
 }
 
 .clip-head__title:hover {
-    background-color: #99A682;
-    color: #654436;
+  background-color: #99A682;
+  color: #654436;
 }
 
 
 .clip-head__image {
-    width: 100%;
+  width: 100%;
 }
+
 .clip-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px 0;
 }
 
 .clip-info__item {
-    padding: 10px 20px;
-    display: flex;
+  padding: 10px 20px;
+  display: flex;
 }
+
 .clip-info__text {
-    flex-grow: 1;
-    text-align: center;
+  flex-grow: 1;
+  text-align: center;
 }
 
 
 .clip-info__description {
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 5px;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 5px;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1500px) {
-    .clips-box {
-        --clipAmount: 4;
-    }
+  .clips-box {
+    --clipAmount: 4;
+  }
 }
+
 @media (max-width: 1200px) {
-    .clips-box {
-        --clipAmount: 3;
-    }
+  .clips-box {
+    --clipAmount: 3;
+  }
 }
+
 @media (max-width: 900px) {
-    .clips-box {
-        --clipAmount: 2;
-    }
+  .clips-box {
+    --clipAmount: 2;
+  }
 }
+
 @media (max-width: 580px) {
-    .clips-box {
-        --clipAmount: 1;
-    }
+  .clips-box {
+    --clipAmount: 1;
+  }
 }
-
-

@@ -4,6 +4,7 @@
   display: none;
   justify-content: space-between;
 }
+
 .pagination__item {
   height: 20px;
   width: 35px;
@@ -17,17 +18,19 @@
   position: relative;
 
 }
+
 .pagination__item--prev:hover,
 .pagination__item--next:hover {
   background-color: #FFCC00;
   cursor: pointer;
 }
+
 .pagination__item--prev:active,
 .pagination__item--next:active {
-  background-color: bisque ;
+  background-color: bisque;
 }
 
-.pagination__hover{
+.pagination__hover {
   display: block;
   width: 20px;
   height: 20px;
