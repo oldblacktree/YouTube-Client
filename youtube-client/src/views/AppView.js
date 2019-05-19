@@ -18,7 +18,7 @@ export default class AppView {
     const greeting = document.createElement('div');
     greeting.classList.add('greeting');
     greeting.innerHTML = '<p class="greeting__text ">Welcome to</p><p class="greeting__text greeting__text--red"> YouTube Client</p>';
-    this.clipsBox.element.appendChild(greeting);
+    document.body.appendChild(greeting);
   }
 }
 

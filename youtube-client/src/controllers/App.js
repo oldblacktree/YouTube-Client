@@ -6,18 +6,23 @@ let model;
 const view = new AppView();
 let request = '';
 
-export default function start() {
+function start() {
   view.renderStartPage();
   view.renderGreeting();
-  view.searchBox.element.addEventListener('keyup', (event) => {
+
+  view.searchBox.element.addEventListener('keyup', async () => {
     if (event.keyCode === 13) {
+     let a = await document.getElementsByClassName('greeting')[0];
+      a.classList.add('display-none');
       request = view.searchBox.element.value;
-      window.console.log(request);
-      model = new AppModel(request);
-      model.getClips();
+      model = await new AppModel(request);
+      const clips = await model.getClips();
+      view.clipsBox.renderClips(clips);
     }
   });
 }
+
+export default start;
 
 
 // async start() {
