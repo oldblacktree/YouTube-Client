@@ -2,11 +2,6 @@ html {
   overflow-x: hidden;
 }
 
-body {
-  background-color: #807164;
-
-}
-
 :root {
 
   --n: 1;
@@ -16,7 +11,7 @@ body {
 .clips-box {
   width: 100%;
   width: calc(var(--n)*100%);
-  background-color: #807164;
+  background-color: #2C2D2C;
   height: calc(100vw / var(--clipAmount) * 1.15);
   ;
   display: flex;
@@ -34,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
-  background-color: #807164;
+  background-color: #2C2D2C;
   user-select: none;
 }
 

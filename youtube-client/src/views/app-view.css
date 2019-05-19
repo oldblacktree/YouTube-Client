@@ -477,6 +477,9 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: #2C2D2C;
+}
 .greeting {
   position: absolute;
   top: 20%;
